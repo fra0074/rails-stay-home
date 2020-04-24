@@ -1,0 +1,60 @@
+<div class="left-part">
+  <div class="second-title mt-5">
+    <p class="sub-title text">un' iniziativa</p>
+    <%= image_tag "le-wagon.png", class: "logo m-top"  %>
+  </div>
+  <div class="main-title">
+    <h1 class="title red-color">MIGLIORA</h2>
+    <h1 class="title">STANDO A CASA</h2>
+  </div>
+  <div id="third" class="third-title index">
+    <p class="index text">supported by</p>
+    <div class="logos-title">
+      <div class="logos-container">
+        <div class="logos">
+          <%= image_tag "ftech.png", class: "logo-ft"  %>
+          <%= image_tag 'fthub-milan.jpg', class: "logo-ft-milan" %>
+          <%= image_tag 'bfrance.jpg', class: "logo-bf" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="circle-top"></div>
+</div>
+<div class="right-part">
+  <div class="list">
+    <div class="list-intro">
+      <p>🚀 Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio temporibus numquam quos necessitatibus id nihil vel non, unde assumenda dignissimos laboriosam ipsum illo repudiandae, corrupti ea exercitationem. Accusamus, ad cupiditate.</p>
+      <br>
+      <br>
+      <div class="current-events">
+        <% @current_events.each do |value| %>
+          <%= render "event", locals: { 
+                                date: value["date"],
+                                time: value["time"], 
+                                title: value["title"],
+                                user: value["user"],
+                                topic: value["topic"],
+                                 } %>
+        <% end  %>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <br>
+      <div class="past-events">
+        <% @past_events.each do |value| %>
+          <%= render "past_event", locals: { 
+                                date: value["date"],
+                                time: value["time"], 
+                                title: value["title"],
+                                user: value["user"],
+                                topic: value["topic"],
+                                 } %>
+        <% end  %>
+      </div>
+    </div>
+  </div>
+</div>

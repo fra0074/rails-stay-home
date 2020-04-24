@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-04-22
+  time: 2020-04-22 00:53:16
+  title: MyString
+  user: MyString
+  topic: MyString
+  label: MyString
+
+two:
+  date: 2020-04-22
+  time: 2020-04-22 00:53:16
+  title: MyString
+  user: MyString
+  topic: MyString
+  label: MyString

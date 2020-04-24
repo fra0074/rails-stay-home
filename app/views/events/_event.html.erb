@@ -1,0 +1,10 @@
+<% mesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre "] %>
+<div class="list-event-group">
+  <% if Date.today == locals[:date] %>
+    <h3 class="title-event"><%= locals[:title] %> <span class="label-today"> 🙌 Today</span> </h3>
+  <% elsif  %>
+    <h3 class="title-event"><%= locals[:title] %> <span class="label-new"> ⭐ New</span> </h3>
+  <% end %>
+  <p class="event-date">🗓️ <%= locals[:date]  %> - Facebook </p>
+  <p class="event-name">👉 <%= locals[:topic] %> - <%= locals[:user] %></p>
+</div>
