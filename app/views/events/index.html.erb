@@ -25,12 +25,12 @@
   <div class="list">
     <div class="list-intro">
       <p>🚀 From the community to the community.</p>
-      <p class="motto">Free, online workshop per imprenditori digitali, startups e futuri devlopers. </p>
+      <p class="motto">Free, online workshop per imprenditori digitali, startups e futuri developers. </p>
       <p class="notice">Tutti gli eventi sono online, è necessario registrarsi sul link di eventbrite per partecipare</p>
       <br>
       <br>
       <div class="current-events">
-        <% @current_events.each do |value| %>
+        <% @current_events.reverse.each do |value| %>
           <%= render "event", locals: { 
                                 date: value["date"],
                                 time: value["time"], 
@@ -39,7 +39,8 @@
                                 topic: value["topic"],
                                 user_link: value["user_link"],
                                 event_link: value["event_link"],
-                                label: value["label"]
+                                label: value["label"],
+                                language: value["language"]
                                  } %>
         <% end  %>
       </div>
@@ -49,7 +50,7 @@
       <br>
       <br>
       <div class="past-events">
-        <% @past_events.reverse.each do |value| %>
+        <% @past_events.each do |value| %>
           <%= render "past_event", locals: { 
                                 date: value["date"],
                                 time: value["time"], 
