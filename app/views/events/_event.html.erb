@@ -6,5 +6,7 @@
     <h3 class="title-event"><%= locals[:title] %> <span class="label-new"> ⭐ New</span> </h3>
   <% end %>
   <p class="event-date">🗓️ <%= locals[:date]  %> - Facebook </p>
-  <p class="event-name">👉 <%= locals[:topic] %> - <%= locals[:user] %></p>
+  <p class="event-name">👉 <%= locals[:topic] %> - <%= link_to locals[:user], locals[:user_link], target: "_blank" %> </p>
+  <p class="event-lng">Lingua <%= locals[:language] == "IT" ? "🇮🇹" : "🇬🇧" %></p>
+  <p class="event-link">Registrati qui ➡️ <%= link_to "Eventbrite",locals[:event_link], target: "_blank" %></p>
 </div>

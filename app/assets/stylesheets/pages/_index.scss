@@ -199,6 +199,7 @@ p {
   // border: solid;
   // border-color: black;
   // border-width: 1px;
+  font-size: 1.15rem;
 }
 
 .list-intro p {
@@ -212,7 +213,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: red;
-  font-size: 100%;
+  font-size: 1.30rem;
 }
 
 .label-new {
@@ -261,6 +262,26 @@ p.event-name {
 
 .list-event-group {
   margin-top: 3rem;
+}
+
+p.event-lng {
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+p.event-link {
+  font-size: 100%;
+}
+
+.motto {
+  font-style: italic !important;
+}
+
+.notice{
+  font-style: normal !important;
+  font-weight: 700 !important;
 }
 
 //RESPONSIVE ----------------------------------------
@@ -411,7 +432,7 @@ p.event-name {
     width: 100vw;
     // height: 50vh;
     background-color: white;
-    overflow-y: inherit;
+    overflow-y: unset;
   }
 
   .list {
@@ -478,36 +499,42 @@ p.event-name {
     font-size: 2vw;
     font-weight: 400;
   }
+  p.event-lng {
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+  }
 }
 
 //Mobile
 
 @media screen and (max-width: 682px) {
   h3.title-event {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   span.label-completed {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   p.event-date {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   p.event-name {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   span.label-today {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   span.label-new {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .list-intro p {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
 

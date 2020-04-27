@@ -20,8 +20,11 @@ ActiveRecord::Schema.define(version: 2020_04_21_225316) do
     t.time "time"
     t.string "title"
     t.string "user"
+    t.string "user_link"
     t.string "topic"
     t.string "label"
+    t.string "language"
+    t.string "event_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

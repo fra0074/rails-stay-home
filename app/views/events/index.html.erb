@@ -4,8 +4,8 @@
     <%= image_tag "le-wagon.png", class: "logo m-top"  %>
   </div>
   <div class="main-title">
-    <h1 class="title red-color">MIGLIORA</h2>
-    <h1 class="title">STANDO A CASA</h2>
+    <h1 class="title red-color">STAY HOME</h2>
+    <h1 class="title">KEEP GROWING</h2>
   </div>
   <div id="third" class="third-title index">
     <p class="index text">supported by</p>
@@ -24,8 +24,9 @@
 <div class="right-part">
   <div class="list">
     <div class="list-intro">
-      <p>🚀 Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio temporibus numquam quos necessitatibus id nihil vel non, unde assumenda dignissimos laboriosam ipsum illo repudiandae, corrupti ea exercitationem. Accusamus, ad cupiditate.</p>
+      <p>🚀 From the community to the community.</p>
+      <p class="motto">Free, online workshop per imprenditori digitali, startups e futuri devlopers. </p>
+      <p class="notice">Tutti gli eventi sono online, è necessario registrarsi sul link di eventbrite per partecipare)</p>
       <br>
       <br>
       <div class="current-events">
@@ -36,6 +37,8 @@
                                 title: value["title"],
                                 user: value["user"],
                                 topic: value["topic"],
+                                user_link: value["user_link"],
+                                event_link: value["event_link"],
                                  } %>
         <% end  %>
       </div>
@@ -45,7 +48,7 @@
       <br>
       <br>
       <div class="past-events">
-        <% @past_events.each do |value| %>
+        <% @past_events.reverse.each do |value| %>
           <%= render "past_event", locals: { 
                                 date: value["date"],
                                 time: value["time"], 

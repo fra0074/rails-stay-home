@@ -8,14 +8,16 @@
 
 Event.destroy_all
 
-10.times do |i|
+30.times do |i|
   Event.create(
     date: "#{i + 1}-04-2020",
-    time: "#{i + 1}.00",
+    time: "6.00",
     title: "Tech Courses",
     user: "Francesco Ecclesie",
+    user_link: "https://www.linkedin.com/in/francesco-ecclesie/?originalSubdomain=it",
     topic: "Javascript for beginners",
     label: "new",
-
+    event_link: "https://www.eventbrite.it/e/webinar-get-started-with-javascript-tickets-103423211610",
+    language: ["EN", "IT"].sample,
   )
 end
