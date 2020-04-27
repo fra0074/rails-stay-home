@@ -4,7 +4,7 @@
   <% elsif  %>
     <h3 class="title-event"><%= locals[:title] %> <span class="label-new"> ⭐ New</span> </h3>
   <% end %>
-  <p class="event-date">🗓️ <%= locals[:date]  %></p>
+  <p class="event-date">🗓️ <%= locals[:date]  %> - <%= locals[:time]  %> </p>
   <p class="event-name">👉 <%= locals[:topic] %> - <%= link_to locals[:user], locals[:user_link], target: "_blank" %> </p>
   <p class="event-lng">Lingua <%= locals[:language] == "IT" ? "🇮🇹" : "🇬🇧" %></p>
   <p class="event-link">Registrati qui ➡️ <%= link_to locals[:label] ,locals[:event_link], target: "_blank" %></p>
