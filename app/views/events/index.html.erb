@@ -12,6 +12,7 @@
     <div class="logos-title">
       <div class="logos-container">
         <div class="logos">
+          <%= image_tag "Logo-SheTech.jpg", class: "logo-shetech" %>
           <%= image_tag "ftech.png", class: "logo-ft"  %>
           <%= image_tag 'fthub-milan.jpg', class: "logo-ft-milan" %>
           <%= image_tag 'bfrance.jpg', class: "logo-bf" %>
@@ -31,9 +32,9 @@
       <br>
       <div class="current-events">
         <% @current_events.reverse.each do |value| %>
-          <%= render "event", locals: { 
+          <%= render "event", locals: {
                                 date: value["date"],
-                                time: value["time"], 
+                                time: value["time"],
                                 title: value["title"],
                                 user: value["user"],
                                 topic: value["topic"],
@@ -51,9 +52,9 @@
       <br>
       <div class="past-events">
         <% @past_events.each do |value| %>
-          <%= render "past_event", locals: { 
+          <%= render "past_event", locals: {
                                 date: value["date"],
-                                time: value["time"], 
+                                time: value["time"],
                                 title: value["title"],
                                 user: value["user"],
                                 topic: value["topic"],
